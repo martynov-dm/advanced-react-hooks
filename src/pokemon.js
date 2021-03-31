@@ -119,12 +119,14 @@ function PokemonForm({
   React.useEffect(() => {
     // note that because it's a string value, if the externalPokemonName
     // is the same as the one we're managing, this will not trigger a re-render
+    console.log('rerender')
     if (typeof externalPokemonName === 'string') {
       setPokemonName(externalPokemonName)
     }
   }, [externalPokemonName])
 
   function handleChange(e) {
+    console.log('rerender')
     setPokemonName(e.target.value)
   }
 
